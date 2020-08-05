@@ -24,11 +24,11 @@ jobs:
         fetch-depth: 0
     - uses: actions/setup-node@v1
     # Runs a single command using the runners shell
-    - name: dependencie
-      run: npm install node-fetch
-    - name: Website rules
-      run: |
-        node daily.js
+    - name: Getting deepai
+      run: npm install deepai
+    - name: daily
+      run: node daily.js
+      env: DEEPAI:${{secrets.DEEPAI}}
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
