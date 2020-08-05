@@ -19,7 +19,7 @@ async function getImage(times = 10) {
 }
 
 async function style(url) {
-    var result = await deepai.callStandardApi("fast-style-transfer", {
+    var result = await deepai.callStandardApi("neural-style", {
         content: url,
         style: base + "&r=" + Math.random()
     });
