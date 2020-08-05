@@ -11,6 +11,7 @@ async function getImage(times = 10) {
     for (var i = 1; i <= times; i++) {
         url = await style(url);
     }
+    url = await deepai.callStandardApi("deepdream ", {image: url}).output_url;
     let file = fs.createWriteStream("bg.png");
     let request = https.get(url, function(response) {
         response.pipe(file);
