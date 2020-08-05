@@ -27,7 +27,7 @@ async function style(url) {
 }
 
 async function deepdream(url) {
-    var result = await deepai.callStandardApi("fast-style-transfer", {
+    var result = await deepai.callStandardApi("deepdream", {
         image: url
     });
     return result.output_url;
