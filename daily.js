@@ -1,6 +1,6 @@
 const deepai = require('deepai');
 deepai.setApiKey(process.env.DEEPAI);
-const base = "https://source.unsplash.com/1920x1080/?nature,water";
+const base = "https://source.unsplash.com/1920x1080/";
 const https = require('https');
 const fs = require('fs');
 
