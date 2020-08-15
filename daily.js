@@ -10,15 +10,10 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
-}
-
 async function getImage(times = 10) {
     url = base;
     for (var i = 1; i <= times; i++) {
         url = await style(url);
-        await sleep(getRandomArbitrary(1, 10));
     }
     url = await deepdream(url);
     let file = fs.createWriteStream("bg.png");
