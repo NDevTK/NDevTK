@@ -7,6 +7,7 @@ const fs = require('fs');
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
 getImage();
 
 async function getImage(times = 5) {
@@ -16,6 +17,9 @@ async function getImage(times = 5) {
         await sleep(2000);
     }
     url = await deepdream(url);
+    if (fs.existsSync(path)) {
+        fs.renameSync("bg.png", "archive/"+Date.now()+".png");
+    }
     let file = fs.createWriteStream("bg.png");
     let request = https.get(url, function(response) {
         response.pipe(file);
