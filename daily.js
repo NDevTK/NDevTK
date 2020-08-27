@@ -7,14 +7,9 @@ const fs = require('fs');
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+getImage();
 
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
-
-getImage(getRndInteger(2, 10));
-
-async function getImage(times = 10) {
+async function getImage(times = 4) {
     url = base;
     for (var i = 1; i <= times; i++) {
         url = await style(url);
