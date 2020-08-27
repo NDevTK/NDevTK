@@ -4,11 +4,15 @@ const base = "https://imgapi.ndev.tk/nature/embed";
 const https = require('https');
 const fs = require('fs');
 
-getImage();
-
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+getImage(getRndInteger(2, 10));
 
 async function getImage(times = 10) {
     url = base;
