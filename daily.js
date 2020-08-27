@@ -9,7 +9,7 @@ function sleep(ms) {
 }
 getImage();
 
-async function getImage(times = 4) {
+async function getImage(times = 5) {
     url = base;
     for (var i = 1; i <= times; i++) {
         url = await style(url);
