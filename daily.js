@@ -14,7 +14,7 @@ async function getImage(times = 10) {
     url = base;
     for (var i = 1; i <= times; i++) {
         url = await style(url);
-        await sleep(1000);
+        await sleep(2000);
     }
     url = await deepdream(url);
     let file = fs.createWriteStream("bg.png");
