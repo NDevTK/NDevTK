@@ -14,7 +14,7 @@ async function getImage(times = 5) {
     url = base;
     for (var i = 1; i <= times; i++) {
         url = await style(url);
-        await sleep(4000);
+        await sleep(5000);
     }
     url = await deepdream(url);
     if (fs.existsSync("bg.png")) {
