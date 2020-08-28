@@ -7,18 +7,19 @@ const fs = require('fs');
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-if (fs.existsSync("bg.png")) {
-    fs.renameSync("bg.png", "art_"+Date.now()+".png");
-}
+
 getImage();
 
 async function getImage(times = 5) {
     url = base;
     for (var i = 1; i <= times; i++) {
         url = await style(url);
-        await sleep(3000);
+        await sleep(4000);
     }
     url = await deepdream(url);
+    if (fs.existsSync("bg.png")) {
+        fs.renameSync("bg.png", "art_"+Date.now()+".png");
+    }
     let file = fs.createWriteStream("bg.png");
     let request = https.get(url, function(response) {
         response.pipe(file);
