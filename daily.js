@@ -12,7 +12,7 @@ function sleep(ms) {
 getImage();
 
 async function getImage(times = 5) {
-    url = await getURL("nature");
+    url = await getURL("waterfall");
     await sleep(5000);
     for (var i = 1; i <= times; i++) {
         url = await style(url);
@@ -29,7 +29,7 @@ async function getImage(times = 5) {
 }
 
 async function style(url) {
-    let nature = await getURL("nature");
+    let nature = await getURL("waterfall");
     var result = await deepai.callStandardApi("neural-style", {
         content: url,
         style: nature
