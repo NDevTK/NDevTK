@@ -30,6 +30,7 @@ jobs:
       run: node daily.js
       env:
         DEEPAI: ${{ secrets.DEEPAI }}
+        FLICKR:  ${{ secrets.FLICKR }}
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
