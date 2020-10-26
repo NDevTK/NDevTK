@@ -11,8 +11,8 @@ function sleep(ms) {
 
 getImage();
 
-async function getImage(times = 3) {
-    url = await getURL("protest");
+async function getImage(times = 2) {
+    url = await getURL("nature");
     await sleep(5000);
     for (var i = 1; i <= times; i++) {
         url = await style(url);
