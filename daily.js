@@ -29,7 +29,7 @@ async function getImage(times = 3) {
 }
 
 async function style(url) {
-    let nature = await getURL("art");
+    let nature = await getURL("cat");
     var result = await deepai.callStandardApi("neural-style", {
         content: url,
         style: nature
