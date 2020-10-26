@@ -11,8 +11,8 @@ function sleep(ms) {
 
 getImage();
 
-async function getImage(times = 5) {
-    url = await getURL("duck");
+async function getImage(times = 3) {
+    url = await getURL("art");
     await sleep(5000);
     for (var i = 1; i <= times; i++) {
         url = await style(url);
