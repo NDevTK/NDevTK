@@ -28,7 +28,7 @@ async function getImage(times = 2) {
 }
 
 async function style(url) {
-    let nature = await getURL("cat");
+    let nature = "https://random.ndev.tk/?subject=cat";
     var result = await deepai.callStandardApi("neural-style", {
         content: url,
         style: nature
