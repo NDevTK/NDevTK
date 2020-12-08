@@ -11,7 +11,7 @@ function sleep(ms) {
 getImage();
 
 async function getImage(times = 2) {
-    url = "https://random.ndev.tk/?subject=art";
+    url = "https://imgapi.ndev.workers.dev/?subject=art";
     await sleep(5000);
     for (var i = 1; i <= times; i++) {
         url = await style(url);
@@ -28,7 +28,7 @@ async function getImage(times = 2) {
 }
 
 async function style(url) {
-    let nature = "https://random.ndev.tk/?subject=cat";
+    let nature = "https://imgapi.ndev.workers.dev/?subject=cat";
     var result = await deepai.callStandardApi("neural-style", {
         content: url,
         style: nature
