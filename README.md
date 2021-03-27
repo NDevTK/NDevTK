@@ -1,5 +1,5 @@
 ### Hi there 👋
-
+Exit: https://closechrome.glitch.me  
 Discord: https://discord.com/invite/kFRm5Dv  
 Website: https://ndev.tk/  
 Email: ndevtk@protonmail.com  
