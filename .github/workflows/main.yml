@@ -35,8 +35,8 @@ jobs:
         git pull
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add .
         rm -rf node_modules
+        git add .
         git commit -m "Daily changes [Auto]" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
