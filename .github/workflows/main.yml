@@ -25,7 +25,9 @@ jobs:
     - uses: actions/setup-node@v1
     # Runs a single command using the runners shell
     - name: Getting deepai
-      run: npm install deepai
+      run: |
+        npm install deepai
+        npm update
     - name: daily
       run: node daily.js
       env:
