@@ -11,7 +11,7 @@ function sleep(ms) {
 getImage();
 
 async function getImage(times = 2) {
-    url = "https://imgapi.ndev.workers.dev/?subject=art";
+    url = "https://imgapi.ndev.workers.dev/?subject=nature";
     await sleep(5000);
     for (var i = 1; i <= times; i++) {
         url = await style(url);
