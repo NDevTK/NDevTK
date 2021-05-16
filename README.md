@@ -2,4 +2,4 @@
 Discord: https://discord.gg/VBhnZ3QCUe  
 Website: https://ndev.tk/  
 Email: ndevtk@protonmail.com  
-![Auto generated image](https://raw.githubusercontent.com/NDevTK/NDevTK/master/bg.png)
+![Auto generated image](https://media.githubusercontent.com/media/NDevTK/NDevTK/master/bg.png)
