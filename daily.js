@@ -10,7 +10,7 @@ function sleep(ms) {
 
 getImage();
 
-async function getImage(times = 2) {
+async function getImage(times = 1) {
     url = "https://imgapi.ndev.workers.dev/?subject=nature";
     await sleep(5000);
     for (var i = 1; i <= times; i++) {
