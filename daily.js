@@ -2,7 +2,6 @@ const deepai = require('deepai');
 deepai.setApiKey(process.env.DEEPAI);
 const https = require('https');
 const fs = require('fs');
-const limit = 4001;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -11,7 +10,7 @@ function sleep(ms) {
 getImage();
 
 async function getImage(times = 1) {
-    url = "https://imgapi.ndev.workers.dev/?subject=nature";
+    let url = "https://imgapi.ndev.workers.dev/?subject=nature";
     await sleep(5000);
     for (var i = 1; i <= times; i++) {
         url = await style(url);
@@ -22,7 +21,7 @@ async function getImage(times = 1) {
         fs.renameSync("bg.png", "art_"+Date.now()+".png");
     }
     let file = fs.createWriteStream("bg.png");
-    let request = https.get(url, function(response) {
+    https.get(url, function(response) {
         response.pipe(file);
     });
 }
