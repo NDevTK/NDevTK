@@ -11,7 +11,7 @@ async function main() {
 async function discord(filename) {
     const formData = new FormData();
     formData.append('file', fs.createReadStream(filename));
-    const res = await axios.post(process.env.DISCORD, formData, {
+    await axios.post(process.env.DISCORD, formData, {
         headers: formData.getHeaders()
     });
 }
