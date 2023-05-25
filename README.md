@@ -1,4 +1,5 @@
 ### Hi there 👋
-Keybase: https://keybase.io/ndevtk  
+Writeups: https://ndevtk.github.io/writeups/  
+Email: ndevtk@protonmail.com  
 Website: https://ndev.tk/  
-Email: ndevtk@protonmail.com
+Keybase: https://keybase.io/ndevtk  
